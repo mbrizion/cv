@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Dark surfaces */
+  --color-bg: oklch(0.15 0.02 260);
+  --color-surface: oklch(0.2 0.03 260);
+  --color-surface-hover: oklch(0.24 0.03 260);
+
+  /* Text */
+  --color-text-primary: oklch(0.92 0.01 260);
+  --color-text-secondary: oklch(0.7 0.02 260);
+  --color-text-muted: oklch(0.55 0.02 260);
+
+  /* Accent (mint / cyan) */
+  --color-accent: oklch(0.72 0.11 178);
+  --color-accent-hover: oklch(0.68 0.12 178);
+  --color-accent-active: oklch(0.62 0.13 178);
+
+  /* States */
+  --color-danger: oklch(0.62 0.2 25);
+  --color-success: oklch(0.7 0.15 145);
+  --color-warning: oklch(0.78 0.16 85);
+
+  /* Borders */
+  --color-border: oklch(0.28 0.02 260);
+}
