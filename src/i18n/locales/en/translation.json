@@ -1,0 +1,16 @@
+{
+  "_": "",
+  "topbar": {
+    "title": ""
+  },
+  "presentation": {
+    "greeting": "Hello, I'm Maxime Brizion",
+    "description": "Passionate about technology since my teenage years, I specialize in frontend development with React and TypeScript. Currently working as a Research Software Engineer at eGreen, building sustainable solutions for energy consumption tracking. I create scalable, performant interfaces with a focus on clean architecture and user experience."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education"
+  }
+}

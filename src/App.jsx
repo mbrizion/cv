@@ -5,7 +5,7 @@ export default function App() {
   return (
     <>
       <Background />
-      <div className="relative z-10">
+      <div className="relative z-10 flex justify-center">
         <Home />
       </div>
     </>
