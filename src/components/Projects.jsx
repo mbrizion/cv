@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 const projects = [
   {
     id: 1,
@@ -26,13 +28,15 @@ const projects = [
 ];
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="projects"
       className="rounded-xl border border-border bg-surface p-6 md:p-8"
     >
       <h2 className="mb-4 md:mb-6 text-base md:text-lg font-medium text-text">
-        Projects
+        {t("sections.projects")}
       </h2>
 
       <div className="space-y-6">

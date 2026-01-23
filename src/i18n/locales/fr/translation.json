@@ -11,5 +11,26 @@
     "skills": "Compétences",
     "experience": "Expérience",
     "education": "Éducation"
+  },
+  "sections": {
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "education": "Éducation",
+    "projects": "Projets"
+  },
+  "skills": {
+    "gitUsedInEveryProject": "Git est utilisé dans tous les projets",
+    "usedAt": "a été utilisé chez",
+    "toMake": "pour",
+    "projectsFromSchool": "projets de l'école",
+    "usedInJob": "utilisé chez",
+    "jobDescriptionComingSoon": "[Description du travail - à venir]",
+    "domains": {
+      "Languages": "Langages",
+      "FrameworksLibraries": "Frameworks & Bibliothèques",
+      "DevOpsTools": "DevOps & Outils",
+      "BackendAPIs": "Backend & APIs",
+      "SystemConcepts": "Système & Concepts"
+    }
   }
 }

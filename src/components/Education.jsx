@@ -1,4 +1,5 @@
 import logo42 from "../assets/images/42.png";
+import { useTranslation } from "react-i18next";
 
 const education = [
   {
@@ -29,13 +30,15 @@ const education = [
 ];
 
 const Education = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="education"
       className="rounded-xl border border-border bg-surface p-6 md:p-8"
     >
       <h2 className="mb-4 md:mb-6 text-base md:text-lg font-medium text-text">
-        Education
+        {t("sections.education")}
       </h2>
 
       <div className="space-y-5">
