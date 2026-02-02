@@ -60,7 +60,7 @@ const Skills = () => {
               <h3 className="text-xs md:text-sm font-medium text-text-muted uppercase tracking-wide">
                 {t(`skills.domains.${translationKey}`)}
               </h3>
-              <div className="flex flex-wrap gap-2 md:gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:flex md:flex-wrap md:gap-3">
                 {getSortedSkills(skills).map((skill) => {
                   const isSelected = selectedSkill === skill.name;
 

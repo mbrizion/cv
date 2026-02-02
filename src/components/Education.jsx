@@ -1,5 +1,6 @@
 import logo42 from "../assets/images/42.png";
 import { useTranslation } from "react-i18next";
+import { TimelineItem } from "./TimelineItem";
 
 const education = [
   {
@@ -37,55 +38,18 @@ const Education = () => {
       id="education"
       className="rounded-xl border border-border bg-surface p-6 md:p-8"
     >
-      <h2 className="mb-4 md:mb-6 text-base md:text-lg font-medium text-text">
+      <h2 className="mb-8 text-base md:text-lg font-medium text-text">
         {t("sections.education")}
       </h2>
 
-      <div className="space-y-5">
-        {education.map((edu) => (
-          <article key={edu.id} className="space-y-1.5">
-            <h3 className="text-sm md:text-base font-medium text-text">
-              {edu.degree}
-            </h3>
-            {edu.school && (
-              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-xs md:text-sm text-text-secondary">
-                {edu.image && (
-                  <span className="bg-white rounded-lg w-6 h-6 flex items-center justify-center">
-                    <img className="w-5" src={edu.image} />
-                  </span>
-                )}
-                <span
-                  className={`text-accent font-medium ${
-                    edu.link ? "cursor-pointer" : ""
-                  }`}
-                  onClick={
-                    edu.link ? () => window.open(edu.link, "_blank") : undefined
-                  }
-                >
-                  {edu.school}
-                </span>
-
-                {edu.location && (
-                  <>
-                    <span className="hidden sm:inline">•</span>
-                    <span>{edu.location}</span>
-                  </>
-                )}
-                <span className="hidden sm:inline">•</span>
-                <span>{edu.period}</span>
-              </div>
-            )}
-            {!edu.school && (
-              <p className="text-xs md:text-sm text-text-secondary">
-                {edu.period}
-              </p>
-            )}
-            {edu.description && (
-              <p className="text-xs md:text-sm text-text-muted leading-relaxed pt-1">
-                {edu.description}
-              </p>
-            )}
-          </article>
+      <div className="relative">
+        {education.map((edu, index) => (
+          <TimelineItem
+            key={edu.id}
+            item={edu}
+            type="education"
+            isLast={index === education.length - 1}
+          />
         ))}
       </div>
     </section>

@@ -4,7 +4,7 @@
   },
   "presentation": {
     "greeting": "Bonjour, je suis Maxime Brizion",
-    "description": "Passionné par la technologie depuis mon adolescence, je me spécialise dans le développement frontend avec React et TypeScript. Je travaille actuellement en tant qu'ingénieur logiciel de recherche chez eGreen, en construisant des solutions durables pour le suivi de la consommation énergétique. Je crée des interfaces évolutives et performantes en mettant l'accent sur une architecture propre et l'expérience utilisateur."
+    "description": "Passionné par la technologie depuis mon adolescence, je me suis spécialisé dans le développement frontend, avec une expertise particulière en React et JavaScript. J’exerce aujourd’hui en tant qu’ingénieur logiciel, où je conçois des interfaces performantes et évolutives, en mettant l’accent sur une architecture propre et une expérience utilisateur soignée. J’ai notamment travaillé sur des projets liés au suivi et à l’optimisation de la consommation énergétique, mais je m’intéresse plus largement à la conception de produits numériques robustes, utiles et bien pensés, quel que soit leur domaine d’application."
   },
   "nav": {
     "about": "À propos",
@@ -31,6 +31,38 @@
       "DevOpsTools": "DevOps & Outils",
       "BackendAPIs": "Backend & APIs",
       "SystemConcepts": "Système & Concepts"
+    }
+  },
+  "experience": {
+    "egreen": {
+      "title": "Ingénieur de recherche en développement logiciel",
+      "company": "eGreen",
+      "location": "Paris",
+      "period": "Sept. 2023 - Présent",
+      "description": "Développement et évolution d'une plateforme SaaS de pilotage de la performance énergétique des bâtiments tertiaires, avec un fort enjeu de visualisation de données, conformité réglementaire et expérience utilisateur.",
+      "achievements": [
+        "Conception et développement d'interfaces frontend complexes en React (hooks, composants fonctionnels, state management).",
+        "Implémentation de tableaux de bord dynamiques pour le suivi des consommations énergétiques et des indicateurs réglementaires (Décret Tertiaire).",
+        "Refonte et optimisation de composants existants pour améliorer les performances, la maintenabilité et la lisibilité du code.",
+        "Intégration de graphiques et visualisations de données (charts, filtres avancés, interactions utilisateur).",
+        "Collaboration étroite avec les équipes backend, produit et design dans un environnement agile.",
+        "Contribution aux choix d'architecture frontend et aux bonnes pratiques de développement."
+      ]
+    },
+    "dled": {
+      "title": "Développeur frontend — Projet personnel",
+      "company": "Delaine & D’Argile",
+      "location": "Remote",
+      "period": "2025 (WIP)",
+      "description": "Création d’un site web de présentation et portfolio, développé de A à Z avec une approche moderne frontend, avec une évolution prévue vers une plateforme e-commerce.",
+      "achievements": [
+        "Conception et développement d’une interface web responsive et accessible.",
+        "Utilisation de technologies modernes pour le frontend (React, Tailwind CSS) et déploiement via GitHub Pages.",
+        "Structuration du code source et du workflow via GitHub, avec gestion de versions.",
+        "Intégration de contenu dynamique et optimisation des performances pour une expérience fluide.",
+        "Préparation de l’architecture frontend pour une future intégration e-commerce via Shopify.",
+        "Gestion du projet en autonomie, expérimentation de nouvelles bibliothèques et méthodes de développement."
+      ]
     }
   }
 }

@@ -17,39 +17,38 @@ export const SkillExpandedContent = ({
     );
   }
 
+  const selectedSkillData = skillsByDomain[domain]?.find(
+    (s) => s.name === selectedSkill,
+  );
+  const usedAtJobs = (selectedSkillData?.usedAt || []).filter(
+    (job) => job !== "42",
+  );
+
   return (
     <div className="space-y-4">
-      {/* Job Usage Section */}
-      {selectedSkill &&
-        skillsByDomain[domain]
-          .find((s) => s.name === selectedSkill)
-          ?.usedAt?.some((job) => ["eGreen"].includes(job)) && (
-          <div className="rounded-lg border border-accent/30 bg-accent/5 p-4">
-            <div className="flex items-center gap-2 flex-wrap mb-3">
-              <span className="text-sm md:text-base text-text font-medium">
-                {selectedSkill} {t("skills.usedAt")}
-              </span>
-              {selectedSkill &&
-                skillsByDomain[domain]
-                  .find((s) => s.name === selectedSkill)
-                  ?.usedAt?.filter((job) => ["eGreen"].includes(job))
-                  .map((place) => (
-                    <div key={place} className="flex items-center gap-2">
-                      {renderJobLogo(place)}
-                      <span className="text-sm font-medium text-text">
-                        {place}
-                      </span>
-                    </div>
-                  ))}
-            </div>
-            <div className="text-sm text-text-secondary italic">
-              {t("skills.toMake")}{" "}
-              <span className="text-accent font-medium">
-                {t("skills.jobDescriptionComingSoon")}
-              </span>
+      {/* Job Usage Sections - One per job (excluding school) */}
+      {usedAtJobs.map((job) => (
+        <div
+          key={job}
+          className="rounded-lg border border-accent/30 bg-accent/5 p-4"
+        >
+          <div className="flex items-center gap-2 flex-wrap mb-3">
+            <span className="text-sm md:text-base text-text font-medium">
+              {selectedSkill} {t("skills.usedAt")}
+            </span>
+            <div className="flex items-center gap-2">
+              {renderJobLogo(job)}
+              <span className="text-sm font-medium text-text">{job}</span>
             </div>
           </div>
-        )}
+          <div className="text-sm text-text-secondary italic">
+            {t("skills.toMake")}{" "}
+            <span className="text-accent font-medium">
+              {t("skills.jobDescriptionComingSoon")}
+            </span>
+          </div>
+        </div>
+      ))}
 
       {/* Projects Section */}
       {filteredProjects.length > 0 && (

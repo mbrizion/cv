@@ -1,8 +1,22 @@
 import { PRIMARY_JOBS, JOB_LOGOS } from "./skillsData.js";
 
+const JOB_ALIASES = {
+  "Delaine & D’Argile": "dled",
+  "Delaine & D'Argile": "dled",
+};
+
+const normalizeJobName = (jobName) => {
+  return JOB_ALIASES[jobName] || jobName;
+};
+
 export const getLogoConfig = (jobName) => {
+  const normalizedJobName = normalizeJobName(jobName);
   return (
-    JOB_LOGOS[jobName] || { src: "", alt: jobName, className: "w-6 h-6" }
+    JOB_LOGOS[normalizedJobName] || {
+      src: "",
+      alt: jobName,
+      className: "w-6 h-6",
+    }
   );
 };
 
@@ -18,7 +32,9 @@ export const renderJobLogo = (jobName) => {
 };
 
 export const isPrimaryJobSkill = (usedAt) => {
-  return usedAt?.some((job) => PRIMARY_JOBS.includes(job));
+  return usedAt?.some((job) =>
+    PRIMARY_JOBS.includes(normalizeJobName(job)),
+  );
 };
 
 export const getSortedSkills = (skills) => {

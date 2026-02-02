@@ -5,7 +5,7 @@
   },
   "presentation": {
     "greeting": "Hello, I'm Maxime Brizion",
-    "description": "Passionate about technology since my teenage years, I specialize in frontend development with React and TypeScript. Currently working as a Research Software Engineer at eGreen, building sustainable solutions for energy consumption tracking. I create scalable, performant interfaces with a focus on clean architecture and user experience."
+    "description": "Passionate about technology since my teenage years, I specialize in frontend development, with a strong focus on React and JavaScript. I work as a software engineer, designing scalable and high-performance interfaces with a strong emphasis on clean architecture and user experience. I have notably worked on projects related to energy consumption monitoring and optimization, but my interests extend more broadly to building robust, well-crafted digital products across a wide range of domains."
   },
   "nav": {
     "about": "About",
@@ -32,6 +32,38 @@
       "DevOpsTools": "DevOps & Tools",
       "BackendAPIs": "Backend & APIs",
       "SystemConcepts": "System & Concepts"
+    }
+  },
+  "experience": {
+    "egreen": {
+      "title": "Software Research & Development Engineer",
+      "company": "eGreen",
+      "location": "Paris",
+      "period": "Sept. 2023 - Present",
+      "description": "Development and evolution of a SaaS platform for monitoring energy performance in tertiary buildings, with a strong focus on data visualization, regulatory compliance, and user experience.",
+      "achievements": [
+        "Design and development of complex frontend interfaces in React (hooks, functional components, state management).",
+        "Implementation of dynamic dashboards for monitoring energy consumption and regulatory indicators (Tertiary Decree).",
+        "Refactoring and optimization of existing components to improve performance, maintainability, and code readability.",
+        "Integration of charts and data visualizations (charts, advanced filters, user interactions).",
+        "Close collaboration with backend, product, and design teams in an agile environment.",
+        "Contribution to frontend architecture decisions and development best practices."
+      ]
+    },
+    "dled": {
+      "title": "Frontend Developer — Personal Side Project",
+      "company": "Delaine & D’Argile",
+      "location": "Remote",
+      "period": "2025 (WIP)",
+      "description": "Creation of a showcase website and portfolio, built end-to-end with a modern frontend approach, with a planned evolution toward an e-commerce platform.",
+      "achievements": [
+        "Design and development of a responsive and accessible web interface.",
+        "Use of modern frontend technologies (React, Tailwind CSS) and deployment via GitHub Pages.",
+        "Structuring of source code and workflow via GitHub, with version control.",
+        "Integration of dynamic content and performance optimization for a smooth experience.",
+        "Preparation of the frontend architecture for future e-commerce integration via Shopify.",
+        "Independent project management, experimenting with new libraries and development methods."
+      ]
     }
   }
 }

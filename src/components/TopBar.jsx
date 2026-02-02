@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { exportCVToPDF } from "../utils/pdfExport";
+import { useCVData } from "../utils/cvDataHook";
 
 const navigation = [
   { key: "about", section: "about" },
@@ -11,18 +13,28 @@ const navigation = [
 const TopBar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
+  const cvData = useCVData();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 70;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      // Close mobile menu if it's open
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
+      // Use setTimeout to ensure menu is closed before calculating scroll position
+      setTimeout(() => {
+        const offset = 70; // Topbar height
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 0);
     }
   };
 
@@ -49,13 +61,25 @@ const TopBar = () => {
             <li key={item.key}>
               <button
                 onClick={() => scrollToSection(item.section)}
-                className="text-sm font-medium text-text-secondary hover:text-accent transition-colors"
+                className="text-sm font-medium text-text-secondary hover:text-accent transition-colors cursor-pointer"
                 aria-label={`Navigate to ${item.key} section`}
               >
                 {t(`nav.${item.key}`)}
               </button>
             </li>
           ))}
+
+          {/* PDF Export Button */}
+          <li>
+            <button
+              onClick={() => exportCVToPDF(cvData)}
+              className="text-sm font-medium text-text-secondary hover:text-accent transition-colors cursor-pointer"
+              aria-label="Export CV as PDF"
+              title="Download CV as PDF"
+            >
+              PDF
+            </button>
+          </li>
 
           {/* Language Buttons */}
           <li className="flex items-center gap-1 border border-border rounded overflow-hidden">
@@ -110,14 +134,46 @@ const TopBar = () => {
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className="hidden md:hidden border-t border-border/40 bg-bg/95 backdrop-blur-md"
+        className="hidden md:hidden border-t border-border/40 bg-bg/95 backdrop-blur-md max-h-[calc(100vh-56px)] overflow-y-auto"
       >
-        <ul className="flex flex-col px-6 py-4 gap-3">
+        <ul className="flex flex-col px-4 sm:px-6 py-4 gap-2">
+          {/* PDF Export Button */}
+          <li>
+            <button
+              onClick={() => {
+                exportCVToPDF(cvData);
+                document.getElementById("mobile-menu")?.classList.add("hidden");
+              }}
+              className="text-sm font-medium text-text-secondary hover:text-accent transition-colors w-full text-left cursor-pointer py-2 px-2 rounded hover:bg-border/20"
+              aria-label="Export CV as PDF"
+            >
+              Download PDF
+            </button>
+          </li>
+
+          {/* Mobile Navigation Items */}
+          {navigation.map((item) => (
+            <li key={item.key}>
+              <button
+                onClick={() => {
+                  scrollToSection(item.section);
+                  document
+                    .getElementById("mobile-menu")
+                    ?.classList.add("hidden");
+                }}
+                className="text-sm font-medium text-text-secondary hover:text-accent transition-colors w-full text-left cursor-pointer py-2 px-2 rounded hover:bg-border/20"
+                aria-label={`Navigate to ${item.key} section`}
+              >
+                {t(`nav.${item.key}`)}
+              </button>
+            </li>
+          ))}
+
           {/* Mobile Language Buttons */}
           <li className="flex items-center gap-1 border border-border rounded overflow-hidden mt-2">
             <button
               onClick={() => switchLanguage("en")}
-              className={`px-3 py-1 text-sm font-medium transition-colors w-full ${
+              className={`px-3 py-1 text-sm font-medium transition-colors w-full cursor-pointer ${
                 lang === "en"
                   ? "bg-accent text-bg"
                   : "bg-bg text-text-secondary hover:bg-border/30"
@@ -128,7 +184,7 @@ const TopBar = () => {
             </button>
             <button
               onClick={() => switchLanguage("fr")}
-              className={`px-3 py-1 text-sm font-medium transition-colors w-full ${
+              className={`px-3 py-1 text-sm font-medium transition-colors w-full cursor-pointer ${
                 lang === "fr"
                   ? "bg-accent text-bg"
                   : "bg-bg text-text-secondary hover:bg-border/30"
@@ -138,22 +194,6 @@ const TopBar = () => {
               FR
             </button>
           </li>
-          {navigation.map((item) => (
-            <li key={item.key}>
-              <button
-                onClick={() => {
-                  scrollToSection(item.section);
-                  document
-                    .getElementById("mobile-menu")
-                    ?.classList.add("hidden");
-                }}
-                className="text-sm font-medium text-text-secondary hover:text-accent transition-colors w-full text-left cursor-pointer"
-                aria-label={`Navigate to ${item.key} section`}
-              >
-                {t(`nav.${item.key}`)}
-              </button>
-            </li>
-          ))}
         </ul>
       </div>
     </header>

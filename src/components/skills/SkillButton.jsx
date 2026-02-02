@@ -14,8 +14,8 @@ export const SkillButton = ({ skill, isSelected, t, onClickSkill }) => {
           : undefined
       }
       className={`
-        flex items-center gap-2 rounded-md border px-2.5 py-1.5 md:px-3 text-xs md:text-sm
-        transition-all duration-300 cursor-pointer whitespace-nowrap group relative
+        flex items-center justify-between sm:justify-start gap-2 rounded-md border px-2.5 py-1.5 md:px-3 text-xs md:text-sm
+        transition-all duration-300 cursor-pointer group relative w-full md:w-auto min-w-0
         ${
           isSelected
             ? "border-accent bg-surface-elevated text-text shadow-lg"
@@ -31,7 +31,7 @@ export const SkillButton = ({ skill, isSelected, t, onClickSkill }) => {
         style={{ color: skill.color }}
         className="text-base md:text-lg shrink-0"
       />
-      <span>{skill.name}</span>
+      <span className="truncate">{skill.name}</span>
       {isPrimary && (
         <span className="text-accent text-xs font-semibold relative">★</span>
       )}

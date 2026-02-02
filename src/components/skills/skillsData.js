@@ -1,5 +1,6 @@
 import logo42 from "../../assets/images/42.png";
 import eGreenLogo from "../../assets/images/egreen.png";
+import dled from "../../assets/images/dled.png";
 import {
   SiReact,
   SiTypescript,
@@ -15,8 +16,7 @@ import {
   SiTailwindcss,
   SiJest,
   SiVitest,
-  SiEslint,
-  SiPrettier,
+  SiBiome,
   SiVite,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
@@ -27,12 +27,18 @@ import { FaCode } from "react-icons/fa6";
 import { TbSubtask } from "react-icons/tb";
 import { GiLaserBurst } from "react-icons/gi";
 
-export const PRIMARY_JOBS = ["eGreen"];
+export const PRIMARY_JOBS = ["eGreen", "dled"];
 
 export const JOB_LOGOS = {
   eGreen: {
     src: eGreenLogo,
     alt: "eGreen logo",
+    className: "w-8 h-8",
+    containerClassName: "w-8 h-8 rounded",
+  },
+  dled: {
+    src: dled,
+    alt: "Delaine & D'Argile logo",
     className: "w-8 h-8",
     containerClassName: "w-8 h-8 rounded",
   },
@@ -53,69 +59,118 @@ export const skillsByDomain = {
       color: "#3178C6",
       usedAt: ["42"],
     },
-    { name: "C", icon: SiCplusplus, color: "#A8B9CC", usedAt: ["42"] },
-    { name: "C++", icon: SiCplusplus, color: "#00599C", usedAt: ["42"] },
-    { name: "Assembly", icon: FaCode, color: "#654FF0", usedAt: ["42"] },
+    {
+      name: "C",
+      icon: SiCplusplus,
+      color: "#A8B9CC",
+      usedAt: ["42"],
+    },
+    {
+      name: "C++",
+      icon: SiCplusplus,
+      color: "#00599C",
+      usedAt: ["42"],
+    },
+    {
+      name: "Assembly",
+      icon: FaCode,
+      color: "#654FF0",
+      usedAt: ["42"],
+    },
     {
       name: "JavaScript",
       icon: SiJavascript,
       color: "#F7DF1E",
-      usedAt: ["42", "eGreen"],
+      usedAt: ["42", "eGreen", "Delaine & D’Argile"],
     },
     {
       name: "HTML5",
       icon: SiHtml5,
       color: "#E34F26",
-      usedAt: ["42", "eGreen"],
+      usedAt: ["42", "eGreen", "Delaine & D’Argile"],
     },
-    { name: "CSS3", icon: SiCss3, color: "#1572B6", usedAt: ["42", "eGreen"] },
+    {
+      name: "CSS3",
+      icon: SiCss3,
+      color: "#1572B6",
+      usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+    },
   ],
   "Frameworks & Libraries": [
     {
       name: "React.js",
       icon: SiReact,
       color: "#61DAFB",
-      usedAt: ["42", "eGreen"],
+      usedAt: ["42", "eGreen", "Delaine & D’Argile"],
     },
-    { name: "NestJS", icon: SiNestjs, color: "#E0234E", usedAt: ["42"] },
+    {
+      name: "NestJS",
+      icon: SiNestjs,
+      color: "#E0234E",
+      usedAt: ["42"],
+    },
     {
       name: "Node.js",
       icon: SiNodedotjs,
-      color: "#339933",
+      color: "#68A063",
       usedAt: ["42", "eGreen"],
     },
     {
       name: "Tailwind",
       icon: SiTailwindcss,
       color: "#06B6D4",
-      usedAt: ["eGreen"],
+      usedAt: ["eGreen", "Delaine & D’Argile"],
     },
   ],
   "DevOps & Tools": [
-    { name: "Git", icon: SiGit, color: "#F05032", usedAt: ["42", "eGreen"] },
+    {
+      name: "Git",
+      icon: SiGit,
+      color: "#F05032",
+      usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+    },
     {
       name: "Docker",
       icon: SiDocker,
       color: "#2496ED",
       usedAt: ["42", "eGreen"],
     },
-    { name: "Nginx", icon: SiNginx, color: "#009639", usedAt: ["42"] },
+    {
+      name: "Nginx",
+      icon: SiNginx,
+      color: "#009900",
+      usedAt: ["42"],
+    },
     {
       name: "CI/CD",
       icon: SiDocker,
       color: "#FCA311",
       usedAt: ["eGreen"],
     },
-    { name: "Jest", icon: SiJest, color: "#C21325", usedAt: ["eGreen"] },
-    { name: "Vitest", icon: SiVitest, color: "#6E9F18", usedAt: ["eGreen"] },
-    { name: "ESLint", icon: SiEslint, color: "#4B32C3", usedAt: ["eGreen"] },
     {
-      name: "Prettier",
-      icon: SiPrettier,
-      color: "#F7B93E",
+      name: "Jest",
+      icon: SiJest,
+      color: "#C21325",
       usedAt: ["eGreen"],
     },
-    { name: "Vite", icon: SiVite, color: "#646CFF", usedAt: ["eGreen"] },
+    {
+      name: "Vitest",
+      icon: SiVitest,
+      color: "#FCC72B",
+      usedAt: ["eGreen"],
+    },
+    {
+      name: "Biome",
+      icon: SiBiome,
+      color: "#3B82F6",
+      usedAt: ["eGreen"],
+    },
+    {
+      name: "Vite",
+      icon: SiVite,
+      color: "#646CFF",
+      usedAt: ["eGreen", "Delaine & D’Argile"],
+    },
   ],
   "Backend & APIs": [
     {
@@ -124,9 +179,24 @@ export const skillsByDomain = {
       color: "#00D8FF",
       usedAt: ["42", "eGreen"],
     },
-    { name: "GraphQL", icon: GrGraphQl, color: "#E10098", usedAt: ["42"] },
-    { name: "MySQL", icon: DiMysql, color: "#4479A1", usedAt: ["42"] },
-    { name: "HTTP Server", icon: FaServer, color: "#FF6B6B", usedAt: ["42"] },
+    {
+      name: "GraphQL",
+      icon: GrGraphQl,
+      color: "#E10098",
+      usedAt: ["42"],
+    },
+    {
+      name: "MySQL",
+      icon: DiMysql,
+      color: "#00758F",
+      usedAt: ["42"],
+    },
+    {
+      name: "HTTP Server",
+      icon: FaServer,
+      color: "#FF6B6B",
+      usedAt: ["42"],
+    },
   ],
   "System & Concepts": [
     {
@@ -141,7 +211,12 @@ export const skillsByDomain = {
       color: "#4ECDC4",
       usedAt: ["42"],
     },
-    { name: "Unix/Shell", icon: FaServer, color: "#FFA62B", usedAt: ["42"] },
+    {
+      name: "Unix/Shell",
+      icon: FaServer,
+      color: "#FFA62B",
+      usedAt: ["42"],
+    },
   ],
 };
 
