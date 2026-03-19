@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export const TimelineItem = ({ item, isLast, type = "experience" }) => {
   const isExperience = type === "experience";
+  const { t } = useTranslation();
 
   return (
     <div className="flex gap-3 sm:gap-4 md:gap-6 relative pb-4 sm:pb-6 md:pb-8">
@@ -29,6 +32,19 @@ export const TimelineItem = ({ item, isLast, type = "experience" }) => {
                 )}
                 <span className="hidden sm:inline">•</span>
                 <span className="text-accent font-medium">{item.company}</span>
+                {item.link && (
+                  <>
+                    <span className="hidden sm:inline">•</span>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-accent-hover/70 transition-colors"
+                    >
+                      {item.linkLabel || t("website")}
+                    </a>
+                  </>
+                )}
                 <span className="hidden sm:inline">•</span>
                 <span>{item.location}</span>
                 <span className="hidden sm:inline">•</span>
@@ -84,6 +100,21 @@ export const TimelineItem = ({ item, isLast, type = "experience" }) => {
                   >
                     {item.school}
                   </span>
+                  {item.link && (
+                    <>
+                      <span className="hidden sm:inline">•</span>
+                      <span>
+                        <a
+                          href={item.link}
+                          className="hover:text-accent-hover/70 transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {item.linkLabel || t("website")}
+                        </a>
+                      </span>
+                    </>
+                  )}
                   {item.location && (
                     <>
                       <span className="hidden sm:inline">•</span>

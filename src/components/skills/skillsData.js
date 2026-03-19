@@ -82,18 +82,30 @@ export const skillsByDomain = {
       icon: SiJavascript,
       color: "#F7DF1E",
       usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.javascript",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.javascript",
+      },
     },
     {
       name: "HTML5",
       icon: SiHtml5,
       color: "#E34F26",
       usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.html5",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.html5",
+      },
     },
     {
       name: "CSS3",
       icon: SiCss3,
       color: "#1572B6",
       usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.css3",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.css3",
+      },
     },
   ],
   "Frameworks & Libraries": [
@@ -102,6 +114,10 @@ export const skillsByDomain = {
       icon: SiReact,
       color: "#61DAFB",
       usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.react",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.react",
+      },
     },
     {
       name: "NestJS",
@@ -113,13 +129,17 @@ export const skillsByDomain = {
       name: "Node.js",
       icon: SiNodedotjs,
       color: "#68A063",
-      usedAt: ["42", "eGreen"],
+      usedAt: ["42"],
     },
     {
       name: "Tailwind",
       icon: SiTailwindcss,
       color: "#06B6D4",
       usedAt: ["eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.tailwind",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.tailwind",
+      },
     },
   ],
   "DevOps & Tools": [
@@ -128,12 +148,19 @@ export const skillsByDomain = {
       icon: SiGit,
       color: "#F05032",
       usedAt: ["42", "eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.git",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.git",
+      },
     },
     {
       name: "Docker",
       icon: SiDocker,
       color: "#2496ED",
       usedAt: ["42", "eGreen"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.docker",
+      },
     },
     {
       name: "Nginx",
@@ -146,30 +173,46 @@ export const skillsByDomain = {
       icon: SiDocker,
       color: "#FCA311",
       usedAt: ["eGreen"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.cicd",
+      },
     },
     {
       name: "Jest",
       icon: SiJest,
       color: "#C21325",
       usedAt: ["eGreen"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.jest",
+      },
     },
     {
       name: "Vitest",
       icon: SiVitest,
       color: "#FCC72B",
       usedAt: ["eGreen"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.vitest",
+      },
     },
     {
       name: "Biome",
       icon: SiBiome,
       color: "#3B82F6",
       usedAt: ["eGreen"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.biome",
+      },
     },
     {
       name: "Vite",
       icon: SiVite,
       color: "#646CFF",
       usedAt: ["eGreen", "Delaine & D’Argile"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.vite",
+        "Delaine & D’Argile": "skills.jobDescriptions.dled.vite",
+      },
     },
   ],
   "Backend & APIs": [
@@ -178,6 +221,9 @@ export const skillsByDomain = {
       icon: TbApi,
       color: "#00D8FF",
       usedAt: ["42", "eGreen"],
+      jobDescriptions: {
+        eGreen: "skills.jobDescriptions.eGreen.restApi",
+      },
     },
     {
       name: "GraphQL",
@@ -225,80 +271,70 @@ export const projects = [
     id: 1,
     name: "Libft",
     period: "2019",
-    description:
-      "Création d'une bibliothèque C personnalisée contenant des réimplémentations de fonctions standard C ainsi que des fonctions utilitaires supplémentaires. Fondation pour tous les futurs projets 42.",
+    descriptionKey: "skills.projects.libft.description",
     technologies: ["C"],
   },
   {
     id: 2,
     name: "Printf",
     period: "2019-2020",
-    description:
-      "Implémentation d'une version simplifiée de la fonction printf en C. Gestion des arguments variadiques et du formatage de chaînes avec les flags %cspdiuxX.",
+    descriptionKey: "skills.projects.printf.description",
     technologies: ["C"],
   },
   {
     id: 3,
     name: "get_next_line",
     period: "2020",
-    description:
-      "Développement d'une fonction capable de lire une ligne depuis un descripteur de fichier. Gestion de l'allocation mémoire et des variables statiques.",
+    descriptionKey: "skills.projects.getNextLine.description",
     technologies: ["C"],
   },
   {
     id: 4,
     name: "push_swap",
     period: "2020-2021",
-    description:
-      "Algorithme de tri optimisé utilisant deux piles et un ensemble limité d'opérations. Implémentation de l'algorithme Turk pour minimiser le nombre de mouvements.",
+    descriptionKey: "skills.projects.pushSwap.description",
     technologies: ["C"],
   },
   {
     id: 5,
     name: "Philosophers",
     period: "2021",
-    description:
-      "Simulation du problème classique des philosophes dinant. Utilisation de threads, mutex et sémaphores pour gérer la synchronisation et éviter les deadlocks.",
+    descriptionKey: "skills.projects.philosophers.description",
     technologies: ["C", "Multithreading"],
   },
   {
     id: 6,
     name: "Minishell",
     period: "Mars 2021 - Avril 2021",
-    description:
-      "Recréer un terminal en C, avec les commandes de base (cd, ls, pwd, etc.), gestion des pipes, redirections, signaux et parsing avancé.",
+    descriptionKey: "skills.projects.minishell.description",
     technologies: ["C", "Unix/Shell"],
   },
   {
     id: 7,
     name: "C++ Modules",
     period: "2021-2022",
-    description:
-      "Série de modules C++ couvrant les concepts fondamentaux : classes, héritage, polymorphisme, templates, STL, exceptions, et design patterns orientés objet.",
+    descriptionKey: "skills.projects.cppModules.description",
     technologies: ["C++"],
   },
   {
     id: 8,
     name: "Cub3d",
     period: "2022",
-    description:
-      "Moteur de raycasting 3D inspiré de Wolfenstein 3D. Création d'une vue dynamique dans un labyrinthe 3D en utilisant la bibliothèque MiniLibX.",
+    descriptionKey: "skills.projects.cub3d.description",
     technologies: ["C", "Raycasting"],
   },
   {
     id: 9,
     name: "Webserv",
     period: "2022-2023",
-    description:
-      "Implémentation d'un serveur HTTP conforme aux RFCs 7230-7235. Gestion des requêtes GET, POST, DELETE, CGI, configuration type Nginx, et I/O non-bloquant avec select().",
+    descriptionKey: "skills.projects.webserv.description",
     technologies: ["C++", "HTTP Server", "Nginx"],
   },
   {
     id: 10,
     name: "Transcendence",
     period: "Novembre 2022 - Janvier 2023",
-    description:
-      "Création d'une application web full-stack avec jeu Pong multijoueur en ligne. Système de comptes utilisateurs, chat en temps réel, matchmaking, et profils de joueurs.",
+    descriptionKey: "skills.projects.transcendence.description",
     technologies: [
       "React",
       "TypeScript",
@@ -317,16 +353,14 @@ export const projects = [
     id: 11,
     name: "libasm",
     period: "2023",
-    description:
-      "Recréation de fonctions C de base en langage assembleur x86_64 (NASM). Compréhension approfondie de l'architecture processeur et des appels système.",
+    descriptionKey: "skills.projects.libasm.description",
     technologies: ["Assembly"],
   },
   {
     id: 12,
     name: "Git",
     period: "Depuis 2019",
-    description:
-      "Tous les projets de l'ecole 42 sont a faire sur un depot git. Chez eGreen nous utilisons actuellement git (gitlab) pour le front et le back",
+    descriptionKey: "skills.projects.git.description",
     technologies: [],
   },
 ];

@@ -1,5 +1,6 @@
 {
   "_": "",
+  "website": "website",
   "topbar": {
     "title": ""
   },
@@ -22,10 +23,77 @@
   "skills": {
     "gitUsedInEveryProject": "Git is used in every project",
     "usedAt": "was used at",
+    "and": "and",
+    "schoolProjectCount_one": "{{count}} project from school",
+    "schoolProjectCount_other": "{{count}} projects from school",
     "toMake": "to make",
     "projectsFromSchool": "projects from school",
     "usedInJob": "used in job",
     "jobDescriptionComingSoon": "[Job description - coming soon]",
+    "jobDescriptions": {
+      "eGreen": {
+        "javascript": "At eGreen, I owned JavaScript performance work across the UI layer, optimizing render paths and state updates to keep dashboards fast under heavy data loads. I focused on scalability and maintainability through reusable utilities, clear architecture, and consistent patterns. This ensured long-term evolution without sacrificing UX quality.",
+        "html5": "I structured HTML5 with semantic, accessible markup to support complex monitoring screens. I optimized the DOM structure for performance and scalability while keeping layouts maintainable and easy to extend. This disciplined structure improved readability and long-term UI evolution.",
+        "react": "I led React performance and scalability efforts, applying memoization, code-splitting, and render profiling. I focused on maintainable component architecture with reusable patterns and predictable state flows. The result was a fast, scalable UI that stayed clean as features grew.",
+        "css3": "I translated Figma/Sketch designs into precise CSS, ensuring visual fidelity while checking feasibility and proposing pragmatic UI adjustments. I applied a technical eye to align spacing, typography, and responsiveness across screens. This created a maintainable styling base for future iterations.",
+        "tailwind": "I introduced Tailwind from scratch and integrated it alongside existing CSS during the migration. I ensured both systems worked together safely while progressively moving styles into utilities. This enabled a smooth transition without breaking legacy styling.",
+        "git": "Git was central to day-to-day collaboration at eGreen, from feature branches and merge requests to code review and coordinated releases. It helped keep frontend work traceable and safe in a multi-team product environment.",
+        "docker": "I used Docker to run supporting services and keep local environments closer to production expectations. This reduced onboarding friction and made cross-team debugging more reliable.",
+        "cicd": "CI/CD pipelines automated checks and deployment steps so frontend changes could move with more confidence and less manual overhead. That improved release reliability and shortened feedback loops.",
+        "jest": "Jest was used to validate UI logic and utility behavior before changes reached production. It helped protect critical frontend behavior while refactoring and adding features.",
+        "vitest": "Vitest provided fast feedback for the Vite-based frontend setup, making it practical to run tests during regular development. This improved confidence without slowing iteration.",
+        "biome": "Biome enforced consistent formatting and linting rules across the frontend codebase. It reduced low-value review noise and helped keep the project maintainable as it grew.",
+        "vite": "Vite improved the local development experience with fast startup and hot updates, while keeping production builds efficient. It supported a smoother workflow on a modern React stack.",
+        "restApi": "I integrated frontend features with REST APIs that powered dashboards, filtering, and regulatory data flows. This required careful handling of asynchronous states, data shaping, and user feedback."
+      },
+      "dled": {
+        "javascript": "JavaScript drives the interactions across the site: landing-page hover states, scroll behavior, image galleries, and navigation between collection pages and product views. The code stays fairly direct because the project is mostly about presenting handcrafted pieces clearly.",
+        "html5": "The site is structured around simple content pages for the homepage, collections, about page, contact, and product detail views. I kept the markup straightforward so the images and text remain easy to maintain as the catalog evolves.",
+        "react": "The project is organized as a small React app with reusable pages and components for ceramics, crochet, steps, shop, and product detail views. React Router and i18n make it easy to move between sections and keep French and English content in sync.",
+        "css3": "A big part of the work was shaping image-heavy layouts, overlays, typography, and responsive spacing so the pieces stay front and center on both mobile and desktop. The styling is intentionally simple and visual.",
+        "tailwind": "Tailwind is used throughout the project for page layout, responsive spacing, overlays, and component states. It made it easier to iterate quickly on a very visual site without building a large custom CSS layer.",
+        "git": "Git helped track content, design, and deployment changes while the site was evolving page by page. It was especially useful for iterating safely on the structure and publishing updates to GitHub Pages.",
+        "vite": "Vite keeps the project lightweight and quick to work on, with a simple build and deployment flow for a static React site hosted on GitHub Pages."
+      }
+    },
+    "projects": {
+      "libft": {
+        "description": "Creation of a custom C library reimplementing standard C functions plus additional utilities. Foundation for all future 42 projects."
+      },
+      "printf": {
+        "description": "Implementation of a simplified printf in C. Variadic arguments and string formatting with the %cspdiuxX flags."
+      },
+      "getNextLine": {
+        "description": "Development of a function that reads a line from a file descriptor. Memory allocation and static variable management."
+      },
+      "pushSwap": {
+        "description": "Optimized sorting algorithm using two stacks and a limited set of operations. Implemented the Turk algorithm to minimize the number of moves."
+      },
+      "philosophers": {
+        "description": "Simulation of the classic dining philosophers problem. Uses threads, mutexes, and semaphores for synchronization and deadlock avoidance."
+      },
+      "minishell": {
+        "description": "Recreate a terminal in C with basic commands (cd, ls, pwd, etc.), pipes, redirections, signals, and advanced parsing."
+      },
+      "cppModules": {
+        "description": "Series of C++ modules covering core concepts: classes, inheritance, polymorphism, templates, STL, exceptions, and object-oriented design patterns."
+      },
+      "cub3d": {
+        "description": "3D raycasting engine inspired by Wolfenstein 3D. Dynamic view in a 3D maze using the MiniLibX library."
+      },
+      "webserv": {
+        "description": "Implementation of an HTTP server compliant with RFCs 7230-7235. Handles GET, POST, DELETE, CGI, Nginx-style config, and non-blocking I/O with select()."
+      },
+      "transcendence": {
+        "description": "Full-stack web app with online multiplayer Pong. User accounts, real-time chat, matchmaking, and player profiles."
+      },
+      "libasm": {
+        "description": "Recreation of basic C functions in x86_64 assembly (NASM). Deep understanding of CPU architecture and system calls."
+      },
+      "git": {
+        "description": "All 42 school projects are done in a git repository. At eGreen we currently use git (GitLab) for frontend and backend."
+      }
+    },
     "domains": {
       "Languages": "Languages",
       "FrameworksLibraries": "Frameworks & Libraries",
@@ -40,7 +108,7 @@
       "company": "eGreen",
       "location": "Paris",
       "period": "Sept. 2023 - Present",
-      "description": "Development and evolution of a SaaS platform for monitoring energy performance in tertiary buildings, with a strong focus on data visualization, regulatory compliance, and user experience.",
+      "description": "Development and evolution of a SaaS platform for monitoring energy performance in tertiary buildings, with a strong focus on data visualization, regulatory compliance, and user experience. I also worked on frontend performance optimization, interface scalability, and cross-team collaboration in an agile environment.",
       "achievements": [
         "Design and development of complex frontend interfaces in React (hooks, functional components, state management).",
         "Implementation of dynamic dashboards for monitoring energy consumption and regulatory indicators (Tertiary Decree).",
@@ -55,7 +123,7 @@
       "company": "Delaine & D’Argile",
       "location": "Remote",
       "period": "2025 (WIP)",
-      "description": "Creation of a showcase website and portfolio, built end-to-end with a modern frontend approach, with a planned evolution toward an e-commerce platform.",
+      "description": "Design and development of a bilingual showcase site for a handmade ceramics and crochet brand, with React routing, collection pages, image carousels, product detail views, and a first shop structure deployed on GitHub Pages.",
       "achievements": [
         "Design and development of a responsive and accessible web interface.",
         "Use of modern frontend technologies (React, Tailwind CSS) and deployment via GitHub Pages.",

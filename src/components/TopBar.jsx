@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { exportCVToPDF } from "../utils/pdfExport";
-import { useCVData } from "../utils/cvDataHook";
 
 const navigation = [
   { key: "about", section: "about" },
@@ -13,7 +11,6 @@ const navigation = [
 const TopBar = () => {
   const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(i18n.language);
-  const cvData = useCVData();
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -72,10 +69,10 @@ const TopBar = () => {
           {/* PDF Export Button */}
           <li>
             <button
-              onClick={() => exportCVToPDF(cvData)}
               className="text-sm font-medium text-text-secondary hover:text-accent transition-colors cursor-pointer"
-              aria-label="Export CV as PDF"
-              title="Download CV as PDF"
+              aria-label="PDF file coming soon"
+              title="PDF file coming soon"
+              type="button"
             >
               PDF
             </button>
@@ -140,12 +137,10 @@ const TopBar = () => {
           {/* PDF Export Button */}
           <li>
             <button
-              onClick={() => {
-                exportCVToPDF(cvData);
-                document.getElementById("mobile-menu")?.classList.add("hidden");
-              }}
+              type="button"
               className="text-sm font-medium text-text-secondary hover:text-accent transition-colors w-full text-left cursor-pointer py-2 px-2 rounded hover:bg-border/20"
-              aria-label="Export CV as PDF"
+              aria-label="PDF file coming soon"
+              title="PDF file coming soon"
             >
               Download PDF
             </button>

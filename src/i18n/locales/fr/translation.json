@@ -1,4 +1,5 @@
 {
+  "website": "site web",
   "topbar": {
     "title": ""
   },
@@ -21,10 +22,77 @@
   "skills": {
     "gitUsedInEveryProject": "Git est utilisé dans tous les projets",
     "usedAt": "a été utilisé chez",
+    "and": "et",
+    "schoolProjectCount_one": "{{count}} projet de l'école",
+    "schoolProjectCount_other": "{{count}} projets de l'école",
     "toMake": "pour",
     "projectsFromSchool": "projets de l'école",
     "usedInJob": "utilisé chez",
     "jobDescriptionComingSoon": "[Description du travail - à venir]",
+    "jobDescriptions": {
+      "eGreen": {
+        "javascript": "Chez eGreen, j’ai piloté l’optimisation des performances JavaScript côté UI, en travaillant les chemins de rendu et les mises à jour d’état pour garder les dashboards rapides sous forte charge. Je me suis concentré sur la scalabilité et la maintenabilité via des utilitaires réutilisables, une architecture claire et des patterns cohérents. Cela garantit une évolution durable sans dégrader l’UX.",
+        "html5": "J’ai structuré le HTML5 avec un balisage sémantique et accessible pour des écrans de suivi complexes. J’ai optimisé la structure du DOM pour la performance et la scalabilité tout en gardant des layouts maintenables et faciles à faire évoluer. Cette rigueur améliore la lisibilité et l’évolution de l’interface sur le long terme.",
+        "react": "J’ai mené les efforts de performance et de scalabilité React, avec mémoïsation, découpage de code et profiling de rendu. Je me suis concentré sur une architecture de composants maintenable, avec des patterns réutilisables et des flux d’état prévisibles. Le résultat est une UI rapide et scalable qui reste propre à mesure que les fonctionnalités grandissent.",
+        "css3": "J’ai décliné les maquettes Figma/Sketch en CSS avec une fidélité visuelle élevée, tout en apportant un regard technique sur la faisabilité et les ajustements UI nécessaires. J’ai aligné les espacements, la typographie et la responsivité sur l’ensemble des écrans. Cela a posé une base de styles durable et maintenable.",
+        "tailwind": "J’ai introduit Tailwind depuis zéro et assuré son intégration avec le CSS existant pendant la migration. J’ai veillé à la cohabitation des deux systèmes tout en transférant progressivement les styles vers les utilities. Cette approche a permis une transition fluide sans casser l’existant.",
+        "git": "Git était au coeur du travail quotidien chez eGreen, entre branches de fonctionnalité, merge requests, revues de code et releases coordonnées. Cela a permis de garder les évolutions frontend traçables et sûres dans un produit impliquant plusieurs équipes.",
+        "docker": "J’ai utilisé Docker pour lancer des services de support et rapprocher l’environnement local des conditions de production. Cela a réduit la friction d’onboarding et rendu le debugging inter-équipes plus fiable.",
+        "cicd": "Les pipelines CI/CD automatisaient les vérifications et certaines étapes de déploiement afin de faire avancer le frontend avec plus de confiance et moins d’opérations manuelles. Cela a amélioré la fiabilité des releases et raccourci les boucles de feedback.",
+        "jest": "Jest servait à valider la logique UI et le comportement des utilitaires avant la mise en production. Cela protégeait les comportements critiques du frontend pendant les refontes et les ajouts de fonctionnalités.",
+        "vitest": "Vitest apportait un feedback rapide dans le setup frontend basé sur Vite, ce qui le rendait pratique au quotidien. Cela améliorait la confiance sans ralentir l’itération.",
+        "biome": "Biome imposait des règles cohérentes de formatage et de linting sur l’ensemble du frontend. Cela réduisait le bruit en review et aidait à garder le projet maintenable à mesure qu’il grandissait.",
+        "vite": "Vite a amélioré l’expérience de développement avec un démarrage rapide et des mises à jour à chaud, tout en gardant des builds de production efficaces. Il soutenait un workflow plus fluide sur une stack React moderne.",
+        "restApi": "J’ai intégré des fonctionnalités frontend à des API REST alimentant les dashboards, le filtrage et les flux de données réglementaires. Cela demandait une gestion attentive de l’asynchronisme, de la mise en forme des données et du feedback utilisateur."
+      },
+      "dled": {
+        "javascript": "JavaScript pilote surtout les interactions du site : effets de survol sur la landing page, comportements de scroll, galeries d’images, et navigation entre les pages de collection et les fiches produit. Le code reste volontairement simple parce que le coeur du projet est avant tout la mise en valeur des pièces.",
+        "html5": "Le site repose sur une structure de pages assez claire : accueil, collections, à propos, contact et fiches produit. J’ai gardé un markup simple pour que le contenu et les images restent faciles à faire évoluer au fil des nouvelles créations.",
+        "react": "Le projet est organisé comme une petite application React, avec des composants réutilisables pour les pages céramique, crochet, étapes, boutique et détail produit. React Router et l’i18n permettent de naviguer proprement entre les sections et de garder les contenus FR/EN alignés.",
+        "css3": "Une bonne partie du travail a consisté à construire des layouts très visuels, avec grandes images, overlays, typographie et espacements responsives pour mettre les créations au centre sur mobile comme sur desktop. Le style reste volontairement sobre.",
+        "tailwind": "Tailwind est utilisé partout pour composer les layouts, les espacements responsives, les overlays et les différents états d’interface. Cela m’a permis d’itérer vite sur un site très visuel sans créer une grosse couche CSS séparée.",
+        "git": "Git m’a servi à suivre les évolutions de contenu, de design et de déploiement pendant toute la construction du site. C’était particulièrement utile pour itérer proprement sur la structure puis publier sur GitHub Pages.",
+        "vite": "Vite garde le projet léger et agréable à développer, avec une build simple à déployer pour un site React statique hébergé sur GitHub Pages."
+      }
+    },
+    "projects": {
+      "libft": {
+        "description": "Création d'une bibliothèque C personnalisée contenant des réimplémentations de fonctions standard C ainsi que des fonctions utilitaires supplémentaires. Fondation pour tous les futurs projets 42."
+      },
+      "printf": {
+        "description": "Implémentation d'une version simplifiée de la fonction printf en C. Gestion des arguments variadiques et du formatage de chaînes avec les flags %cspdiuxX."
+      },
+      "getNextLine": {
+        "description": "Développement d'une fonction capable de lire une ligne depuis un descripteur de fichier. Gestion de l'allocation mémoire et des variables statiques."
+      },
+      "pushSwap": {
+        "description": "Algorithme de tri optimisé utilisant deux piles et un ensemble limité d'opérations. Implémentation de l'algorithme Turk pour minimiser le nombre de mouvements."
+      },
+      "philosophers": {
+        "description": "Simulation du problème classique des philosophes dinant. Utilisation de threads, mutex et sémaphores pour gérer la synchronisation et éviter les deadlocks."
+      },
+      "minishell": {
+        "description": "Recréer un terminal en C, avec les commandes de base (cd, ls, pwd, etc.), gestion des pipes, redirections, signaux et parsing avancé."
+      },
+      "cppModules": {
+        "description": "Série de modules C++ couvrant les concepts fondamentaux : classes, héritage, polymorphisme, templates, STL, exceptions, et design patterns orientés objet."
+      },
+      "cub3d": {
+        "description": "Moteur de raycasting 3D inspiré de Wolfenstein 3D. Création d'une vue dynamique dans un labyrinthe 3D en utilisant la bibliothèque MiniLibX."
+      },
+      "webserv": {
+        "description": "Implémentation d'un serveur HTTP conforme aux RFCs 7230-7235. Gestion des requêtes GET, POST, DELETE, CGI, configuration type Nginx, et I/O non-bloquant avec select()."
+      },
+      "transcendence": {
+        "description": "Création d'une application web full-stack avec jeu Pong multijoueur en ligne. Système de comptes utilisateurs, chat en temps réel, matchmaking, et profils de joueurs."
+      },
+      "libasm": {
+        "description": "Recréation de fonctions C de base en langage assembleur x86_64 (NASM). Compréhension approfondie de l'architecture processeur et des appels système."
+      },
+      "git": {
+        "description": "Tous les projets de l'ecole 42 sont a faire sur un depot git. Chez eGreen nous utilisons actuellement git (gitlab) pour le front et le back"
+      }
+    },
     "domains": {
       "Languages": "Langages",
       "FrameworksLibraries": "Frameworks & Bibliothèques",
@@ -39,7 +107,7 @@
       "company": "eGreen",
       "location": "Paris",
       "period": "Sept. 2023 - Présent",
-      "description": "Développement et évolution d'une plateforme SaaS de pilotage de la performance énergétique des bâtiments tertiaires, avec un fort enjeu de visualisation de données, conformité réglementaire et expérience utilisateur.",
+      "description": "Développement et évolution d'une plateforme SaaS de pilotage de la performance énergétique des bâtiments tertiaires, avec un fort enjeu de visualisation de données, conformité réglementaire et expérience utilisateur. Travail sur l'optimisation des performances frontend, la scalabilité de l'interface et la collaboration inter-équipes dans un environnement agile. (Lien vers l'application: app.egreen.fr, le site egreen.fr n'a pas été créé par moi)",
       "achievements": [
         "Conception et développement d'interfaces frontend complexes en React (hooks, composants fonctionnels, state management).",
         "Implémentation de tableaux de bord dynamiques pour le suivi des consommations énergétiques et des indicateurs réglementaires (Décret Tertiaire).",
@@ -54,7 +122,7 @@
       "company": "Delaine & D’Argile",
       "location": "Remote",
       "period": "2025 (WIP)",
-      "description": "Création d’un site web de présentation et portfolio, développé de A à Z avec une approche moderne frontend, avec une évolution prévue vers une plateforme e-commerce.",
+      "description": "Conception et développement d’un site vitrine bilingue pour une marque artisanale de céramique et crochet, avec navigation React, pages de collection, carrousels d’images, fiches produit et première structure de boutique déployée sur GitHub Pages.",
       "achievements": [
         "Conception et développement d’une interface web responsive et accessible.",
         "Utilisation de technologies modernes pour le frontend (React, Tailwind CSS) et déploiement via GitHub Pages.",

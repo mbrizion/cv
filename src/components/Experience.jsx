@@ -31,6 +31,7 @@ const Experience = () => {
       location: t("experience.dled.location"),
       period: t("experience.dled.period"),
       description: t("experience.dled.description"),
+      link: "https://delaine-et-dargile.github.io/",
       achievements: [
         t("experience.dled.achievements.0"),
         t("experience.dled.achievements.1"),

@@ -23,41 +23,62 @@ export const SkillExpandedContent = ({
   const usedAtJobs = (selectedSkillData?.usedAt || []).filter(
     (job) => job !== "42",
   );
+  const jobDescriptions = usedAtJobs
+    .map((job) => ({
+      job,
+      descriptionKey: selectedSkillData?.jobDescriptions?.[job],
+    }))
+    .filter((entry) => entry.descriptionKey);
 
   return (
     <div className="space-y-4">
-      {/* Job Usage Sections - One per job (excluding school) */}
-      {usedAtJobs.map((job) => (
-        <div
-          key={job}
-          className="rounded-lg border border-accent/30 bg-accent/5 p-4"
-        >
-          <div className="flex items-center gap-2 flex-wrap mb-3">
+      {/* Job Usage Summary (excluding school) */}
+      {usedAtJobs.length > 0 && (
+        <div className="rounded-lg border border-accent/30 bg-accent/5 p-4">
+          <div className="flex items-center gap-2 flex-wrap">
             <span className="text-sm md:text-base text-text font-medium">
               {selectedSkill} {t("skills.usedAt")}
             </span>
-            <div className="flex items-center gap-2">
-              {renderJobLogo(job)}
-              <span className="text-sm font-medium text-text">{job}</span>
+            <div className="flex items-center gap-2 flex-wrap">
+              {usedAtJobs.map((job, index) => (
+                <div key={job} className="flex items-center gap-2">
+                  {index > 0 && (
+                    <span className="text-sm text-text-secondary">
+                      {t("skills.and")}
+                    </span>
+                  )}
+                  {renderJobLogo(job)}
+                  <span className="text-sm font-medium text-text">{job}</span>
+                </div>
+              ))}
             </div>
           </div>
-          <div className="text-sm text-text-secondary italic">
-            {t("skills.toMake")}{" "}
-            <span className="text-accent font-medium">
-              {t("skills.jobDescriptionComingSoon")}
-            </span>
-          </div>
+          {jobDescriptions.length > 0 && (
+            <div className="mt-3 rounded-md border border-border/50 bg-surface p-3 space-y-3">
+              {jobDescriptions.map(({ job, descriptionKey }) => (
+                <div key={job} className="flex items-start gap-3">
+                  <div className="mt-0.5 shrink-0">{renderJobLogo(job)}</div>
+                  <div className="space-y-1">
+                    <div className="text-sm font-medium text-text">{job}</div>
+                    <p className="text-sm text-text-secondary leading-relaxed">
+                      {t(descriptionKey)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
-      ))}
+      )}
 
       {/* Projects Section */}
       {filteredProjects.length > 0 && (
         <div className="rounded-lg border border-accent/30 bg-accent/5 p-4 space-y-3">
           <div className="flex items-center gap-3 flex-wrap">
             <h4 className="text-sm font-medium text-text">
-              {filteredProjects.length}
-              {filteredProjects.length === 1 ? " project" : " projects"}{" "}
-              {t("skills.projectsFromSchool")}
+              {t("skills.schoolProjectCount", {
+                count: filteredProjects.length,
+              })}
             </h4>
             <div className="flex gap-2">{renderJobLogo("42")}</div>
           </div>
@@ -72,7 +93,9 @@ export const SkillExpandedContent = ({
                   <p className="text-text-muted text-xs">{project.period}</p>
                 </div>
                 <p className="text-text-secondary leading-relaxed">
-                  {project.description}
+                  {project.descriptionKey
+                    ? t(project.descriptionKey)
+                    : project.description}
                 </p>
                 {project.technologies.length > 0 && (
                   <div className="flex flex-wrap gap-1 pt-1">
