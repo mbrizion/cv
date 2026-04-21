@@ -133,5 +133,26 @@
         "Independent project management, experimenting with new libraries and development methods."
       ]
     }
+  },
+  "education": {
+    "42": {
+      "degree": "Software Development",
+      "school": "42 Paris",
+      "location": "Paris",
+      "period": "Sept. 2019 - Jun. 2023",
+      "description": "Intensive software development curriculum focused on peer learning and project-based education."
+    },
+    "bts": {
+      "degree": "BTS in Biology, Analysis and Control",
+      "school": "Lycée JB Poquelin",
+      "location": "Saint-Germain-en-Laye",
+      "period": "2017 - 2019"
+    },
+    "bac": {
+      "degree": "High School Diploma in Laboratory Science and Technology",
+      "school": "",
+      "location": "",
+      "period": "2015 - 2017"
+    }
   }
 }

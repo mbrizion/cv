@@ -13,7 +13,7 @@ const Presentation = () => {
       >
         <div className="flex justify-center mb-6 md:mb-0 md:justify-end order-first md:order-last">
           <div className="h-32 w-32 md:h-60 md:w-60 border-2 rounded-full border-accent/80 bg-surface-elevated flex items-center justify-center">
-            <img src={me} className="rounded-full" />
+            <img src={me} alt="Maxime Brizion" className="rounded-full" />
           </div>
         </div>
         <div className="md:col-span-2 space-y-4 w-full">

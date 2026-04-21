@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import cvPdf from "../assets/files/cv.pdf";
 
 const navigation = [
   { key: "about", section: "about" },
@@ -40,6 +41,15 @@ const TopBar = () => {
     setLang(lng);
   };
 
+  const downloadCv = () => {
+    const link = document.createElement("a");
+    link.href = cvPdf;
+    link.download = "Maxime-Brizion-CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-bg/80 w-full border-b border-border/40">
       <nav className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 w-full">
@@ -66,12 +76,13 @@ const TopBar = () => {
             </li>
           ))}
 
-          {/* PDF Export Button */}
+          {/* PDF Download Button */}
           <li>
             <button
+              onClick={downloadCv}
               className="text-sm font-medium text-text-secondary hover:text-accent transition-colors cursor-pointer"
-              aria-label="PDF file coming soon"
-              title="PDF file coming soon"
+              aria-label="Download CV PDF"
+              title="Download CV PDF"
               type="button"
             >
               PDF
@@ -82,7 +93,7 @@ const TopBar = () => {
           <li className="flex items-center gap-1 border border-border rounded overflow-hidden">
             <button
               onClick={() => switchLanguage("en")}
-              className={`px-3 py-1 text-sm font-medium transition-colors ${
+              className={`cursor-pointer! px-3 py-1 text-sm font-medium transition-colors ${
                 lang === "en"
                   ? "bg-accent text-bg"
                   : "bg-bg text-text-secondary hover:bg-border/30"
@@ -93,7 +104,7 @@ const TopBar = () => {
             </button>
             <button
               onClick={() => switchLanguage("fr")}
-              className={`px-3 py-1 text-sm font-medium transition-colors ${
+              className={`cursor-pointer! px-3 py-1 text-sm font-medium transition-colors ${
                 lang === "fr"
                   ? "bg-accent text-bg"
                   : "bg-bg text-text-secondary hover:bg-border/30"
@@ -134,13 +145,14 @@ const TopBar = () => {
         className="hidden md:hidden border-t border-border/40 bg-bg/95 backdrop-blur-md max-h-[calc(100vh-56px)] overflow-y-auto"
       >
         <ul className="flex flex-col px-4 sm:px-6 py-4 gap-2">
-          {/* PDF Export Button */}
+          {/* PDF Download Button */}
           <li>
             <button
               type="button"
+              onClick={downloadCv}
               className="text-sm font-medium text-text-secondary hover:text-accent transition-colors w-full text-left cursor-pointer py-2 px-2 rounded hover:bg-border/20"
-              aria-label="PDF file coming soon"
-              title="PDF file coming soon"
+              aria-label="Download CV PDF"
+              title="Download CV PDF"
             >
               Download PDF
             </button>

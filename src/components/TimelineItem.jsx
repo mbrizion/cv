@@ -86,20 +86,20 @@ export const TimelineItem = ({ item, isLast, type = "experience" }) => {
                       className="w-4 h-4 sm:w-5 sm:h-5 bg-white rounded p-0.5 shrink-0"
                     />
                   )}
-                  <span
-                    className={`text-accent font-medium wrap-break-words ${
-                      item.link
-                        ? "cursor-pointer hover:text-accent-hover transition-colors"
-                        : ""
-                    }`}
-                    onClick={
-                      item.link
-                        ? () => window.open(item.link, "_blank")
-                        : undefined
-                    }
-                  >
-                    {item.school}
-                  </span>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent font-medium wrap-break-words hover:text-accent-hover transition-colors"
+                    >
+                      {item.school}
+                    </a>
+                  ) : (
+                    <span className="text-accent font-medium wrap-break-words">
+                      {item.school}
+                    </span>
+                  )}
                   {item.link && (
                     <>
                       <span className="hidden sm:inline">•</span>

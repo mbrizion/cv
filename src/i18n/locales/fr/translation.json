@@ -31,7 +31,7 @@
     "jobDescriptionComingSoon": "[Description du travail - à venir]",
     "jobDescriptions": {
       "eGreen": {
-        "javascript": "Chez eGreen, j’ai piloté l’optimisation des performances JavaScript côté UI, en travaillant les chemins de rendu et les mises à jour d’état pour garder les dashboards rapides sous forte charge. Je me suis concentré sur la scalabilité et la maintenabilité via des utilitaires réutilisables, une architecture claire et des patterns cohérents. Cela garantit une évolution durable sans dégrader l’UX.",
+        "javascript": "Chez eGreen, j’ai piloté l’optimisation des performances JavaScript côté UI, en travaillant les chemins de rendu et les mises à jour d’état pour garder les tableaux de bord rapides sous forte charge. Je me suis concentré sur la scalabilité et la maintenabilité via des utilitaires réutilisables, une architecture claire et des patterns cohérents. Cela garantit une évolution durable sans dégrader l’UX.",
         "html5": "J’ai structuré le HTML5 avec un balisage sémantique et accessible pour des écrans de suivi complexes. J’ai optimisé la structure du DOM pour la performance et la scalabilité tout en gardant des layouts maintenables et faciles à faire évoluer. Cette rigueur améliore la lisibilité et l’évolution de l’interface sur le long terme.",
         "react": "J’ai mené les efforts de performance et de scalabilité React, avec mémoïsation, découpage de code et profiling de rendu. Je me suis concentré sur une architecture de composants maintenable, avec des patterns réutilisables et des flux d’état prévisibles. Le résultat est une UI rapide et scalable qui reste propre à mesure que les fonctionnalités grandissent.",
         "css3": "J’ai décliné les maquettes Figma/Sketch en CSS avec une fidélité visuelle élevée, tout en apportant un regard technique sur la faisabilité et les ajustements UI nécessaires. J’ai aligné les espacements, la typographie et la responsivité sur l’ensemble des écrans. Cela a posé une base de styles durable et maintenable.",
@@ -131,6 +131,27 @@
         "Préparation de l’architecture frontend pour une future intégration e-commerce via Shopify.",
         "Gestion du projet en autonomie, expérimentation de nouvelles bibliothèques et méthodes de développement."
       ]
+    }
+  },
+  "education": {
+    "42": {
+      "degree": "Développement informatique",
+      "school": "42 Paris",
+      "location": "Paris",
+      "period": "Sept. 2019 - Juin 2023",
+      "description": "Cursus intensif en développement logiciel axé sur l'apprentissage entre pairs et la pédagogie par projets."
+    },
+    "bts": {
+      "degree": "BTS Biologie Analyse et Contrôle",
+      "school": "Lycée JB Poquelin",
+      "location": "St Germain en Laye",
+      "period": "2017 - 2019"
+    },
+    "bac": {
+      "degree": "Bac Science et Technologie de Laboratoire",
+      "school": "",
+      "location": "",
+      "period": "2015 - 2017"
     }
   }
 }
