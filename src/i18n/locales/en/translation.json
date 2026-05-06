@@ -108,6 +108,7 @@
       "company": "eGreen",
       "location": "Paris",
       "period": "Sept. 2023 - Present",
+      "recommendationLabel": "Recommendation Letter - eGreen",
       "description": "Development and evolution of a SaaS platform for monitoring energy performance in tertiary buildings, with a strong focus on data visualization, regulatory compliance, and user experience. I also worked on frontend performance optimization, interface scalability, and cross-team collaboration in an agile environment.",
       "achievements": [
         "Design and development of complex frontend interfaces in React (hooks, functional components, state management).",

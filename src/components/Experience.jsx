@@ -1,5 +1,6 @@
 import eGreenLogo from "../assets/images/egreen.png";
 import dled from "../assets/images/dled.png";
+import eGreenRecommendation from "../assets/files/recommendation maxime.pdf";
 import { useTranslation } from "react-i18next";
 import { TimelineItem } from "./TimelineItem";
 
@@ -14,6 +15,7 @@ const Experience = () => {
       location: t("experience.egreen.location"),
       period: t("experience.egreen.period"),
       description: t("experience.egreen.description"),
+      link: 'https://app.egreen.fr',
       achievements: [
         t("experience.egreen.achievements.0"),
         t("experience.egreen.achievements.1"),
@@ -23,6 +25,8 @@ const Experience = () => {
         t("experience.egreen.achievements.5"),
       ],
       logo: eGreenLogo,
+      recommendationFile: eGreenRecommendation,
+      recommendationLabel: t("experience.egreen.recommendationLabel"),
     },
     {
       id: 2,

@@ -41,15 +41,26 @@ export const TimelineItem = ({ item, isLast, type = "experience" }) => {
                       rel="noopener noreferrer"
                       className="hover:text-accent-hover/70 transition-colors"
                     >
-                      {item.linkLabel || t("website")}
+                      {item.link || ''}
                     </a>
                   </>
                 )}
+                
                 <span className="hidden sm:inline">•</span>
                 <span>{item.location}</span>
                 <span className="hidden sm:inline">•</span>
                 <span className="text-text-muted">{item.period}</span>
+                {item.recommendationFile && item.recommendationLabel && (
+                <a
+                  href={item.recommendationFile}
+                  download
+                  className="inline-flex items-center rounded-md border-2 border-accent/30 px-3 py-2 text-xs sm:text-sm font-medium text-accent transition-colors hover:bg-accent/10"
+                >
+                  {item.recommendationLabel}
+                </a>
+              )}
               </div>
+              
               <h3 className="text-sm sm:text-base md:text-base font-semibold text-text">
                 {item.title}
               </h3>

@@ -99,7 +99,8 @@
       "DevOpsTools": "DevOps & Outils",
       "BackendAPIs": "Backend & APIs",
       "SystemConcepts": "Système & Concepts"
-    }
+    },
+    "schoolProjectCount_many": ""
   },
   "experience": {
     "egreen": {
@@ -107,7 +108,8 @@
       "company": "eGreen",
       "location": "Paris",
       "period": "Sept. 2023 - Présent",
-      "description": "Développement et évolution d'une plateforme SaaS de pilotage de la performance énergétique des bâtiments tertiaires, avec un fort enjeu de visualisation de données, conformité réglementaire et expérience utilisateur. Travail sur l'optimisation des performances frontend, la scalabilité de l'interface et la collaboration inter-équipes dans un environnement agile. (Lien vers l'application: app.egreen.fr, le site egreen.fr n'a pas été créé par moi)",
+      "recommendationLabel": "Lettre de recommandation - eGreen",
+      "description": "Développement et évolution d'une plateforme SaaS de pilotage de la performance énergétique des bâtiments tertiaires, avec un fort enjeu de visualisation de données, conformité réglementaire et expérience utilisateur. Travail sur l'optimisation des performances frontend, la scalabilité de l'interface et la collaboration inter-équipes dans un environnement agile.",
       "achievements": [
         "Conception et développement d'interfaces frontend complexes en React (hooks, composants fonctionnels, state management).",
         "Implémentation de tableaux de bord dynamiques pour le suivi des consommations énergétiques et des indicateurs réglementaires (Décret Tertiaire).",

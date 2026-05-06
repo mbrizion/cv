@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import cvPdf from "../assets/files/cv.pdf";
+import cvPdf from "../assets/files/cv_maxime_brizion.pdf";
 
 const navigation = [
   { key: "about", section: "about" },
